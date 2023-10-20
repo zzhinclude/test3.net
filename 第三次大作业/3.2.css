@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");/*从其他样式表导入样式规则*/
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;/*字体*/
+}
+
+body
+{
+    background: rgba(0, 0, 0, 0.652) url(./images/a1.jpg);
+    background-attachment: fixed;/*背景图像相对于视口固定*/
+    background-blend-mode: hard-light;/*定义背景层的混合模式为hard-light*/
+}
+
+.container{/*定义中间的样式*/
+    position: absolute;/*绝对定位*/
+    left: 100px;
+    right: 100px;
+    bottom: 80px;
+    background: url(./images/a1.jpg);
+    background-attachment: fixed;/*背景图像相对于视口固定*/
+    display: flex;/*弹性盒子布局*/
+    justify-content: center;/*居中排列*/
+    align-items: center;/*垂直居中*/
+    flex-direction: column;/*项目垂直显示*/
+    box-shadow: 0 50px 50px rgba(0,0,0,0.5),
+                0 0 0 100px rgba(0,0,0,.1);
+}
+
+.container h2 {
+    text-align: center;/*文本居中对齐*/
+    font-size: 10em;/*设计元素尺寸*/
+    line-height: 0.7em;/*行高*/
+    color: #333;/*字体颜色*/
+    margin-top: -80px;
+}
+
+.container h2 span{
+    display: block;/*块级元素*/
+    font-weight: 300;/*元素宽度*/
+    letter-spacing: 6px;/*元素字母间距*/
+    font-size: 0.2em;
+}
+.countdown{
+    display: flex;
+    margin-top: 50px;
+}
+.countdown div{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    background: #333;
+    color: #fff;
+    margin: 0 15px;
+    font-size: 3em;
+    font-weight: 500;
+}
+.countdown div:before{
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    background: #ff0;
+    color: #333;
+    font-size: 0.35em;
+    line-height: 35px;
+    font-weight: 300;
+}
+.container #day:before{
+    content: 'Days';/*套用上述模板*/
+}
+.container #hour:before{
+    content: 'Hours';
+}
+.container #minute:before{
+    content: 'Minutes';
+}
+.container #second:before{
+    content: 'Seconds';
+}
